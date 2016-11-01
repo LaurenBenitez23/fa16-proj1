@@ -17,7 +17,7 @@ class PokemonsController < ApplicationController
 			p.update(health: new_health)
 		end
 		p.save!
-		redirect_to :controller => 'trainers', :action => 'show', :id => current_trainer.id
+		redirect_to :controller => 'trainers', :action => 'show', :id => p.trainer_id
 	end
 
 	def new
